@@ -27,7 +27,7 @@ export default function CodeList() {
         fetchCodes()
     }, [])
     return (
-        <div className='flex flex-col items-center justify-between m-10'>
+        <div>
             <BeatLoader
                 color="white"
                 loading={loading}
@@ -35,7 +35,7 @@ export default function CodeList() {
                 aria-label="Loading..."
                 data-testid="loader"
             />
-            <div className="mb-6 lg:mb-0">
+            <div>
                 <div className="relative block bg-gray-700 rounded-lg shadow-lg">
                     {list.map((code, index) => (
                         <div key={index}>
@@ -49,6 +49,7 @@ export default function CodeList() {
                                 <CodeMirror
                                     value={code.code.slice(0, 99)}
                                     height="200px"
+                                    width='280px'
                                     color='#333333'
                                     theme="dark"
                                     readOnly={true}

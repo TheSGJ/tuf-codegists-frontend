@@ -115,12 +115,12 @@ export default function CodeInput() {
     }
   }
   return (
-    <div>
-      <form style={{ width: "600px" }}>
+    <div className="container">
+      <form>
         <div className="flex items-center justify-center from-teal-100 via-teal-300 to-teal-500">
-          <div className="w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl dark:bg-[#121212]">
-            <div className="max-w-md mx-auto  space-y-6">
-              <div className="space-y-2 text-gray-700">
+          <div className="rounded-lg max-w-300 shadow-xl p-5 dark:bg-[#121212]">
+            <div>
+              <div className="text-gray-700">
                 <div className="mb-6">
                   <label
                     className="block text-gray-300 text-sm font-bold mb-2"
@@ -193,9 +193,8 @@ export default function CodeInput() {
                 <div>
                   <CodeMirror
                     theme="dark"
-                    maxWidth="280px"
-                    minWidth="400px"
-                    minHeight="400px"
+                    height="270px"
+                    width="340px"
                     value={code}
                     extensions={[getSyntax()]}
                     onChange={onChange}
