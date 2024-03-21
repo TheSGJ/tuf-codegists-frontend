@@ -48,7 +48,6 @@ export default function CodeList() {
 
                                 <CodeMirror
                                     value={code.code.slice(0, 99)}
-                                    height="200px"
                                     width='280px'
                                     color='#333333'
                                     theme="dark"
